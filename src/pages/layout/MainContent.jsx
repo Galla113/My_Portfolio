@@ -1,9 +1,9 @@
-import { Box } from "@mui/material";
+import { div } from "motion/react-client";
 
 export default function MainContent() {
   return (
-    <Box>
-
-    </Box>
+    <div>
+      
+    </div>
   )
 }

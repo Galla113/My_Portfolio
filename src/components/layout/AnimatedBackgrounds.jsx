@@ -1,6 +1,6 @@
 import Balatro from './animated-backgrounds/Balatro';
 
-export default function BalatroBG() {
+export default function BalatroBackground() {
   return (
     <Balatro
       isRotate
