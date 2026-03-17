@@ -1,7 +1,7 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  background-color: #ee790b;
+body, :root {
+	margin: 0%;
+	font-family: "'Audiowide', 'sans-serif'";
+	line-height: 1;
+	font-weight: 400;
+  background-color: #030354;
 }
