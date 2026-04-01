@@ -1,0 +1,102 @@
+@keyframes fadeInButton {
+	to {
+		pointer-events: auto;
+		cursor: pointer;
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInBottom {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.header {
+	height: 5.195rem;
+	display: flex;
+	justify-content: center;
+	position: sticky;
+	top: 0;
+	z-index: 998;
+	background: #2e3086;
+}
+
+.borderBottom {
+	width: 0;
+	z-index: 999;
+	top: 0;
+	flex-direction: row;
+	position: sticky;
+	height: 5.195rem;
+	border-bottom: 7px solid black;
+	animation: fadeInBottom 1s ease forwards 4.8s;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	gap: 5rem;
+}
+
+.buttons button {
+	width: max-content;
+	color: white;
+	position: relative;
+	padding: 1.85rem 2rem;
+	opacity: 0;
+	border: none;
+	cursor: none;
+	pointer-events: none;
+	background: transparent;
+	animation: fadeInButton 1s ease forwards 5s;
+}
+
+.buttons button::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 0;
+	bottom: 0;
+	left: 0;
+	background: red;
+	transition: height 0.1s ease-in-out 0s;
+	z-index: -1;
+}
+
+.buttons button:hover::before {
+	height: 100%;
+	transition: height 0.1s ease-in-out 0.1s;
+}
+
+.buttons button::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -0.5em;
+	width: 100%;
+	border-bottom: 7px solid red;
+	transform: scaleX(0);
+	transition: transform 0.1s ease-in-out 0.1s;
+}
+
+.buttons button:hover::after {
+	transform: scaleX(1);
+	transition: transform 0.1s ease-in-out 0s;
+}
+
+.buttons button:nth-child(1) {
+	animation-delay: 5s;
+}
+
+.buttons button:nth-child(2) {
+	animation-delay: 5.2s;
+}
+
+.buttons button:nth-child(3) {
+	animation-delay: 5.4s;
+}

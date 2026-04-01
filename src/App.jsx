@@ -1,9 +1,11 @@
-import IntroPage from "./pages/layout/IntroPage";
+import Home from "./Home"
 
-export default function App() {
+function App() {
   return (
-    <div>
-      <IntroPage />
-    </div>
-  );
+    <>
+      <Home />
+    </>
+  )
 }
+
+export default App
