@@ -1,0 +1,69 @@
+@keyframes openingCurtain {
+	0% {
+		transform: translateY(0);
+	}
+	80% {
+		transform: translateY(-90%);
+		background: #2e3086;
+	}
+	100% {
+		transform: translateY(-100%);
+		background: #2e3086;
+	}
+}
+
+@keyframes showText {
+	to {
+		color: white;
+	}
+}
+
+@keyframes typewriter {
+	0% {
+		width: 0;
+	}
+	25% {
+		width: 14%;
+	}
+	75% {
+		width: 14%;
+	}
+	100% {
+		width: 0;
+	}
+}
+
+@keyframes blink-caret {
+	50% {
+		border-color: white;
+	}
+}
+
+@keyframes caretToHeader {
+}
+
+.intro {
+	height: 100vh;
+	width: 100vw;
+	z-index: 1000;
+	display: flex;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	background: rgb(175, 91, 91);
+	animation: openingCurtain 1.5s ease-in-out forwards 3.5s;
+}
+
+.intro h1 {
+	overflow: hidden;
+	color: transparent;
+	border-right: 0.2rem solid transparent;
+	white-space: nowrap;
+	width: 0;
+	margin: 0 auto;
+	letter-spacing: 0.32rem;
+	animation:
+		blink-caret 0.8s ease infinite 0.5s,
+		showText 0.1s forwards 1.5s,
+		typewriter 2s steps(10) alternate 1.5s;
+}
