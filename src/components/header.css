@@ -6,12 +6,9 @@
 	}
 }
 
-@keyframes fadeInBottom {
-	from {
-		width: 0;
-	}
+@keyframes fadeInGrainient {
 	to {
-		width: 100%;
+		opacity: 1;
 	}
 }
 
@@ -19,21 +16,12 @@
 	height: 5.195rem;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	position: sticky;
 	top: 0;
 	z-index: 998;
-	background: #2e3086;
-}
-
-.borderBottom {
-	width: 0;
-	z-index: 999;
-	top: 0;
-	flex-direction: row;
-	position: sticky;
-	height: 5.195rem;
-	border-bottom: 7px solid black;
-	animation: fadeInBottom 1s ease forwards 4.8s;
+	background: #000000;
+	overflow: hidden;
 }
 
 .buttons {
@@ -54,6 +42,7 @@
 	pointer-events: none;
 	background: transparent;
 	animation: fadeInButton 1s ease forwards 5s;
+	pointer-events: auto;
 }
 
 .buttons button::before {
@@ -63,13 +52,13 @@
 	height: 0;
 	bottom: 0;
 	left: 0;
-	background: red;
+	background: #331c9b54;
 	transition: height 0.1s ease-in-out 0s;
 	z-index: -1;
 }
 
 .buttons button:hover::before {
-	height: 100%;
+	height: 104%;
 	transition: height 0.1s ease-in-out 0.1s;
 }
 
@@ -77,9 +66,9 @@
 	content: "";
 	position: absolute;
 	left: 0;
-	bottom: -0.5em;
+	bottom: -0.2em;
 	width: 100%;
-	border-bottom: 7px solid red;
+	border-bottom: 7px solid #5d7dd4;
 	transform: scaleX(0);
 	transition: transform 0.1s ease-in-out 0.1s;
 }
@@ -99,4 +88,23 @@
 
 .buttons button:nth-child(3) {
 	animation-delay: 5.4s;
+}
+
+.borderBottom,
+.buttons {
+	pointer-events: none;
+}
+
+.grainient {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	animation: fadeInGrainient 1s ease-in 4.5s forwards;
 }

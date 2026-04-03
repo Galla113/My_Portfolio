@@ -4,11 +4,11 @@
 	}
 	80% {
 		transform: translateY(-90%);
-		background: #2e3086;
+		background: #000000;
 	}
 	100% {
 		transform: translateY(-100%);
-		background: #2e3086;
+		background: #000000;
 	}
 }
 
@@ -37,9 +37,6 @@
 	50% {
 		border-color: white;
 	}
-}
-
-@keyframes caretToHeader {
 }
 
 .intro {
