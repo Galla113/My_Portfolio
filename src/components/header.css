@@ -22,8 +22,12 @@
 }
 
 @keyframes buttonBGFlow {
-	0% { transform: translateY(0);}
-	100% {transform: translateY(50%);}
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(50%);
+	}
 }
 
 .header {
@@ -46,7 +50,7 @@
 	position: relative;
 	height: 5.195rem;
 	border-bottom: 7px solid #361c9b;
-	border-image: linear-gradient(to right,#000000, #361c9b, #361c9b, #000000) 1;
+	border-image: linear-gradient(to right, #000000, #361c9b, #361c9b, #000000) 1;
 	animation: fadeInBorderBottom 2s ease forwards 4.8s;
 }
 
@@ -79,7 +83,14 @@
 	bottom: 0;
 	left: 0;
 	/* background: #331c9b54; */
-	background: linear-gradient(to top, #331c9b54,#5c3fe095,#331c9b54, #5c3fe095,#331c9b54);
+	background: linear-gradient(
+		to top,
+		#331c9b54,
+		#5c3fe095,
+		#331c9b54,
+		#5c3fe095,
+		#331c9b54
+	);
 	animation: buttonBGFlow 1s linear infinite;
 	transition: height 0.1s ease-in-out 0s;
 	z-index: -1;
@@ -96,14 +107,21 @@
 	left: 0;
 	bottom: -0.5em;
 	width: 100%;
-	border-bottom: 7px solid #4825d4a9;
+	border-bottom: 7px solid #5c3fe095;
 	transform: scaleX(0);
 	transition: transform 0.1s ease-in-out 0.1s;
 }
 
 .buttons button:hover::after {
 	transform: scaleX(1);
-	transition: transform 0.1s ease-in-out 0s;
+	transition:
+		transform 0.1s ease-in-out 0s,
+		border-bottom 0.13s ease-out;
+}
+
+.buttons button:active::after {
+	border-bottom: 7px solid #7559f0;
+	transition: border-bottom 0.13s ease-out;
 }
 
 .buttons button:nth-child(1) {
