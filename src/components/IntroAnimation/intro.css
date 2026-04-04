@@ -18,6 +18,24 @@
 	}
 }
 
+@keyframes fadeInBG {
+	0%{
+		opacity: 0;
+	}
+	25%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 1;
+	}
+	75%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
 /* Phone */
 @media (min-width: 425px) {
 	@keyframes typewriter {
@@ -86,20 +104,34 @@
 	position: fixed;
 	justify-content: center;
 	align-items: center;
-	background: rgb(175, 91, 91);
-	animation: openingCurtain 1.5s ease-in-out forwards 2.5s;
+	background: rgb(2, 0, 19);
+	animation: openingCurtain 1.5s ease-in-out forwards 2.8s;
 }
 
-.intro h1 {
+.introBG{
+	opacity: 0;
+	animation: fadeInBG 2.8s ease-in forwards;
+}
+
+.introText{
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+
+.introText h1 {
+	width: 0;
+	position: absolute;
 	overflow: hidden;
 	color: transparent;
 	border-right: 0.2rem solid transparent;
 	white-space: nowrap;
-	width: 0;
-	margin: 0 auto;
 	letter-spacing: 0.32rem;
+	margin: 0 auto;
 	animation:
-		blink-caret 0.8s ease infinite 0.2s,
-		showText 0.1s forwards 0.6s,
-		typewriter 2s steps(10) alternate 0.8s;
+		blink-caret 0.8s ease infinite 0.3s,
+		showText 0.1s forwards 0.4s,
+		typewriter 2s steps(10) alternate 0.5s;
 }
