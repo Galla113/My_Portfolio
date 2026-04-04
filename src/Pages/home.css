@@ -1,0 +1,15 @@
+@keyframes contentBG {
+  to{
+    background: #000000;
+    color: gray;
+  }
+}
+
+.content{
+  height: 100vh; 
+  padding: 1.5rem 1.1875rem 1.5rem 1.5rem;
+  overflow-y: auto; 
+  color: rgb(0, 0, 0);
+  background: #000000;
+  animation: contentBG 1s ease-in 4.2s forwards;
+}

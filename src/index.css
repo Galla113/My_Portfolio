@@ -11,3 +11,18 @@
 	font-weight: 400;
 	overflow: hidden;
 }
+
+::-webkit-scrollbar {
+	background: rgb(0, 0, 0);
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+	background: #20202069;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #202020;
+}
+
