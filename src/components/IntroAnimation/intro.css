@@ -18,18 +18,57 @@
 	}
 }
 
-@keyframes typewriter {
-	0% {
-		width: 0;
+/* Phone */
+@media (min-width: 425px) {
+	@keyframes typewriter {
+		0% {
+			width: 0;
+		}
+		25% {
+			width: 58%;
+		}
+		75% {
+			width: 58%;
+		}
+		100% {
+			width: 0;
+		}
 	}
-	25% {
-		width: 14%;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+	@keyframes typewriter {
+		0% {
+			width: 0;
+		}
+		25% {
+			width: 28%;
+		}
+		75% {
+			width: 28%;
+		}
+		100% {
+			width: 0;
+		}
 	}
-	75% {
-		width: 14%;
-	}
-	100% {
-		width: 0;
+}
+
+/* Dekstop */
+@media (min-width: 1024px) {
+	@keyframes typewriter {
+		0% {
+			width: 0;
+		}
+		25% {
+			width: 14%;
+		}
+		75% {
+			width: 14%;
+		}
+		100% {
+			width: 0;
+		}
 	}
 }
 
@@ -48,7 +87,7 @@
 	justify-content: center;
 	align-items: center;
 	background: rgb(175, 91, 91);
-	animation: openingCurtain 1.5s ease-in-out forwards 3.5s;
+	animation: openingCurtain 1.5s ease-in-out forwards 2.5s;
 }
 
 .intro h1 {
@@ -60,7 +99,7 @@
 	margin: 0 auto;
 	letter-spacing: 0.32rem;
 	animation:
-		blink-caret 0.8s ease infinite 0.5s,
-		showText 0.1s forwards 1.5s,
-		typewriter 2s steps(10) alternate 1.5s;
+		blink-caret 0.8s ease infinite 0.2s,
+		showText 0.1s forwards 0.6s,
+		typewriter 2s steps(10) alternate 0.8s;
 }

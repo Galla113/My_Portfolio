@@ -71,8 +71,24 @@
 	cursor: none;
 	pointer-events: none;
 	background: transparent;
-	animation: fadeInButton 1s ease forwards 5s;
+	transition: fontWeight 0.2s ease-in;
+	animation: fadeInButton 1s ease forwards 5.2s;
 	pointer-events: auto;
+	text-shadow: none;
+	transition:
+		text-shadow 0.3s ease,
+		color 0.1s ease;
+}
+
+.buttons button:hover {
+	text-shadow:
+		0 0 2px currentColor,
+		0 0 2px currentColor;
+}
+
+.buttons button:active {
+	transition: color 0.1 ease;
+	color: #e6dfdf;
 }
 
 .buttons button::before {
@@ -125,15 +141,15 @@
 }
 
 .buttons button:nth-child(1) {
-	animation-delay: 5s;
-}
-
-.buttons button:nth-child(2) {
 	animation-delay: 5.2s;
 }
 
-.buttons button:nth-child(3) {
+.buttons button:nth-child(2) {
 	animation-delay: 5.4s;
+}
+
+.buttons button:nth-child(3) {
+	animation-delay: 5.6s;
 }
 
 .borderBottom,
@@ -152,5 +168,5 @@
 	top: 0;
 	left: 0;
 	opacity: 0;
-	animation: fadeInGrainient 1s ease-in 4.5s forwards;
+	animation: fadeInGrainient 1s ease-in 4.7s forwards;
 }

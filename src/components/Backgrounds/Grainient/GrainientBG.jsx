@@ -8,7 +8,7 @@ export default function GrainientBG() {
           color1="#2d2d2d"
           color2="#361c9b"
           color3="#2d2d2d"
-          timeSpeed={1.5}
+          timeSpeed={3}
           colorBalance={0}
           warpStrength={1}
           warpFrequency={5.5}
